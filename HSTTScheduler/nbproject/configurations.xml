@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>engine/model/constraints/Constraint.h</itemPath>
+      <itemPath>engine/model/events/Course.h</itemPath>
+      <itemPath>engine/model/times/Day.h</itemPath>
+      <itemPath>engine/model/events/Event.h</itemPath>
+      <itemPath>engine/model/events/EventGroup.h</itemPath>
+      <itemPath>engine/model/resources/Resource.h</itemPath>
+      <itemPath>engine/model/resources/ResourceGroup.h</itemPath>
+      <itemPath>engine/model/resources/ResourceType.h</itemPath>
+      <itemPath>engine/model/Schedule.h</itemPath>
+      <itemPath>engine/model/solutions/SolEvent.h</itemPath>
+      <itemPath>engine/model/solutions/Solution.h</itemPath>
+      <itemPath>engine/model/times/Time.h</itemPath>
+      <itemPath>engine/model/times/TimeGroup.h</itemPath>
+      <itemPath>engine/model/times/Week.h</itemPath>
+      <itemPath>engine/io/XHSTTExporter.h</itemPath>
+      <itemPath>engine/io/XHSTTImporter.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>engine/model/constraints/Constraint.cpp</itemPath>
+      <itemPath>engine/model/events/Course.cpp</itemPath>
+      <itemPath>engine/model/times/Day.cpp</itemPath>
+      <itemPath>engine/model/events/Event.cpp</itemPath>
+      <itemPath>engine/model/events/EventGroup.cpp</itemPath>
+      <itemPath>engine/model/resources/Resource.cpp</itemPath>
+      <itemPath>engine/model/resources/ResourceGroup.cpp</itemPath>
+      <itemPath>engine/model/resources/ResourceType.cpp</itemPath>
+      <itemPath>engine/model/Schedule.cpp</itemPath>
+      <itemPath>engine/model/solutions/SolEvent.cpp</itemPath>
+      <itemPath>engine/model/solutions/Solution.cpp</itemPath>
+      <itemPath>engine/model/times/Time.cpp</itemPath>
+      <itemPath>engine/model/times/TimeGroup.cpp</itemPath>
+      <itemPath>engine/model/times/Week.cpp</itemPath>
+      <itemPath>engine/io/XHSTTExporter.cpp</itemPath>
+      <itemPath>engine/io/XHSTTImporter.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>nbproject/project.properties</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandLine>-std=c++11</commandLine>
+        </ccTool>
+      </compileType>
+      <item path="engine/io/XHSTTExporter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/io/XHSTTExporter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/io/XHSTTImporter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/io/XHSTTImporter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/Schedule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/Schedule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/constraints/Constraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/Constraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/events/Course.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/events/Course.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/events/Event.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/events/Event.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/events/EventGroup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/events/EventGroup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/resources/Resource.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/Resource.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceGroup.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceType.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceType.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/solutions/SolEvent.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/solutions/SolEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/solutions/Solution.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/solutions/Solution.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/Day.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/Day.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/Time.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/Time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/TimeGroup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/TimeGroup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/Week.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/Week.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="engine/io/XHSTTExporter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/io/XHSTTExporter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/io/XHSTTImporter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/io/XHSTTImporter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/Schedule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/Schedule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/constraints/Constraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/Constraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/events/Course.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/events/Course.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/events/Event.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/events/Event.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/events/EventGroup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/events/EventGroup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/resources/Resource.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/Resource.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceGroup.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceType.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/resources/ResourceType.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/solutions/SolEvent.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/solutions/SolEvent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/solutions/Solution.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/solutions/Solution.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/Day.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/Day.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/Time.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/Time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/TimeGroup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/TimeGroup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/model/times/Week.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/times/Week.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
