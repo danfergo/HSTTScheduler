@@ -31,7 +31,7 @@
 
 #include "ResourceType.h"
 
-ResourceType::ResourceType() {
+ResourceType::ResourceType(string name): mName(name) {
 }
 
 ResourceType::ResourceType(const ResourceType& orig) {

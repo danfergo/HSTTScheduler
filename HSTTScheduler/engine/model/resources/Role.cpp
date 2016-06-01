@@ -23,20 +23,30 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Role.cpp
  * Author: danfergo
  * 
- * Created on 28 de Maio de 2016, 22:37
+ * Created on 29 de Maio de 2016, 23:17
  */
 
-#include "EventGroup.h"
+#include "Role.h"
 
-EventGroup::EventGroup(string name):mName(name) {
+Role::Role(string name, ResourceType * resourceType) : mName(name), mResourceType(resourceType), mResource(NULL) {
 }
 
-EventGroup::EventGroup(const EventGroup& orig) {
+Role::Role(string name, Resource * resource) : mName(name), mResourceType(resource->getResourceType()), mResource(resource) {
 }
 
-EventGroup::~EventGroup() {
+Role::Role(const Role& orig) {
 }
 
+Role::~Role() {
+}
+
+Resource * Role::getResource() {
+    return mResource;
+}
+
+bool Role::hasResourceAssigned() const {
+    return mResource != NULL;
+};

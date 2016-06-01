@@ -23,20 +23,37 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   AssignTimeConstraint.cpp
  * Author: danfergo
  * 
- * Created on 28 de Maio de 2016, 22:37
+ * Created on 30 de Maio de 2016, 20:39
  */
 
-#include "EventGroup.h"
+#include "AssignTimeConstraint.h"
+#include <iostream>
+#include <vector>
+#include "../resources/Role.h"
+#include "../solutions/SolEvent.h"
+#include "../Schedule.h"
 
-EventGroup::EventGroup(string name):mName(name) {
+AssignTimeConstraint::AssignTimeConstraint(string name, bool required, float weight, CostFunction costFunction) : Constraint(name, required, weight, costFunction) {
 }
 
-EventGroup::EventGroup(const EventGroup& orig) {
+int AssignTimeConstraint::evaluate(Solution * solution, Schedule * schedule) const {
+    int cost = 0;
+
+    for (vector<EventGroup*>::const_iterator evenGrouptIt = mEventGroups.begin(); evenGrouptIt != mEventGroups.end(); ++evenGrouptIt) {
+
+        for (vector<Event*>::iterator eventIt = (*evenGrouptIt)->begin(); eventIt != (*evenGrouptIt)->end(); ++eventIt) {
+            SolEvent * solEvent = Schedule::eventSolution(solution, *eventIt);
+            if (solEvent == NULL || solEvent->getTime() == NULL) {
+                cost++;
+            }
+        }
+    }
+    return cost;
 }
 
-EventGroup::~EventGroup() {
+AssignTimeConstraint::~AssignTimeConstraint() {
 }
 

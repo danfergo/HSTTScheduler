@@ -31,12 +31,6 @@
 
 #include "Day.h"
 
-Day::Day() {
-}
+Day::Day(string name): TimeGroup(name){
 
-Day::Day(const Day& orig) {
-}
-
-Day::~Day() {
-}
-
+};

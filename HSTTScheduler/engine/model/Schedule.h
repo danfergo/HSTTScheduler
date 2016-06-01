@@ -33,16 +33,34 @@
 #define SCHEDULE_H
 
 #include <vector>
-#include "times/TimeGroup.h"
+#include <string>
+#include "times/Time.h"
+#include "resources/Resource.h"
+#include "events/Event.h"
+#include "solutions/Solution.h"
+#include "constraints/Constraint.h"
+
+using namespace std;
 
 class Schedule {
 public:
     Schedule();
-    Schedule(const Schedule& orig);
+    vector<Time*> & getTimes();
+    vector<Resource*>& getResources();
+    vector<Event*>& getEvents();
+    vector<Solution*>& getSolutions();
+    vector<Constraint*>& getConstraints();
+    void setId(string id);
+    string getId() const;
+    static SolEvent * eventSolution(Solution * solution, Event * event);
     virtual ~Schedule();
 private:
-    std::vector<TimeGroup *> mTimeGroups;
-    
+    vector<Time*> mTimes;
+    vector<Resource*> mResources;
+    vector<Event*> mEvents;
+    vector<Solution *> mSolutions;
+    vector<Constraint *> mConstraints;
+
 };
 
 #endif /* SCHEDULE_H */

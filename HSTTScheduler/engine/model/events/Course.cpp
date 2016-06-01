@@ -31,10 +31,7 @@
 
 #include "Course.h"
 
-Course::Course() {
-}
-
-Course::Course(const Course& orig) {
+Course::Course(string name): EventGroup(name) {
 }
 
 Course::~Course() {

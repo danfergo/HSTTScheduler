@@ -32,13 +32,17 @@
 #ifndef TIMEGROUP_H
 #define TIMEGROUP_H
 
+#include <map>
+#include <string>
+
+using namespace std;
+
 class TimeGroup {
 public:
-    TimeGroup();
-    TimeGroup(const TimeGroup& orig);
+    TimeGroup(string name);
     virtual ~TimeGroup();
 private:
-
+    string mName;
 };
 
 #endif /* TIMEGROUP_H */

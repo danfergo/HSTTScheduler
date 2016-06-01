@@ -32,14 +32,18 @@
 #ifndef TIME_H
 #define TIME_H
 
+#include <string>
 #include "TimeGroup.h"
+
+using namespace std;
 
 class Time {
 public:
-    Time();
+    Time(string name, TimeGroup * timeGroup);
     Time(const Time& orig);
     virtual ~Time();
 private:
+    string mName;
     TimeGroup * mTimeGroup;
 };
 

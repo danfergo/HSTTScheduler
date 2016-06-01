@@ -32,13 +32,20 @@
 #ifndef RESOURCEGROUP_H
 #define RESOURCEGROUP_H
 
-class ResourceGroup {
+#include <vector>
+#include <string>
+#include "ResourceType.h"
+
+using namespace std;
+
+class Resource;
+class ResourceGroup: public vector<Resource*> {
 public:
-    ResourceGroup();
-    ResourceGroup(const ResourceGroup& orig);
+    ResourceGroup(string name, ResourceType * const resourceType);
     virtual ~ResourceGroup();
 private:
-
+    string mName;
+    ResourceType * const mResourceType;
 };
 
 #endif /* RESOURCEGROUP_H */

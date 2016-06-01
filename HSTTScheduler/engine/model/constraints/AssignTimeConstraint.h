@@ -23,20 +23,28 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   AssignTimeConstraint.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 20:39
  */
 
-#include "EventGroup.h"
+#ifndef ASSIGNTIMECONSTRAINT_H
+#define ASSIGNTIMECONSTRAINT_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include <vector>
+#include "Constraint.h"
+#include "EventGroupsBasedContraint.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+using namespace std;
 
-EventGroup::~EventGroup() {
-}
+class AssignTimeConstraint : public Constraint, public EventGroupsBasedContraint {
+public:
+    AssignTimeConstraint(string name, bool required, float weight, CostFunction costFunction);
+    virtual int evaluate(Solution * solution, Schedule * schedule) const;
+    virtual ~AssignTimeConstraint();
+private:
+};
+
+#endif /* ASSIGNTIMECONSTRAINT_H */
 

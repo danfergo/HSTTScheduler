@@ -4,22 +4,33 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>engine/model/constraints/AssignResourceConstraint.h</itemPath>
+      <itemPath>engine/model/constraints/AssignTimeConstraint.h</itemPath>
+      <itemPath>engine/model/constraints/AvoidClashesConstraint.h</itemPath>
       <itemPath>engine/model/constraints/Constraint.h</itemPath>
+      <itemPath>engine/evaluator/Cost.h</itemPath>
       <itemPath>engine/model/events/Course.h</itemPath>
       <itemPath>engine/model/times/Day.h</itemPath>
+      <itemPath>engine/evaluator/Evaluator.h</itemPath>
       <itemPath>engine/model/events/Event.h</itemPath>
       <itemPath>engine/model/events/EventGroup.h</itemPath>
+      <itemPath>engine/model/constraints/EventGroupsBasedContraint.h</itemPath>
+      <itemPath>engine/model/constraints/PreferResourcesConstraint.h</itemPath>
       <itemPath>engine/model/resources/Resource.h</itemPath>
       <itemPath>engine/model/resources/ResourceGroup.h</itemPath>
+      <itemPath>engine/model/constraints/ResourceGroupsBasedContraint.h</itemPath>
       <itemPath>engine/model/resources/ResourceType.h</itemPath>
+      <itemPath>engine/model/resources/Role.h</itemPath>
       <itemPath>engine/model/Schedule.h</itemPath>
       <itemPath>engine/model/solutions/SolEvent.h</itemPath>
       <itemPath>engine/model/solutions/Solution.h</itemPath>
       <itemPath>engine/model/times/Time.h</itemPath>
       <itemPath>engine/model/times/TimeGroup.h</itemPath>
+      <itemPath>engine/io/Utils.h</itemPath>
       <itemPath>engine/model/times/Week.h</itemPath>
       <itemPath>engine/io/XHSTTExporter.h</itemPath>
       <itemPath>engine/io/XHSTTImporter.h</itemPath>
+      <itemPath>lib/tinyxml2/tinyxml2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -28,28 +39,51 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>engine/model/constraints/AssignResourceConstraint.cpp</itemPath>
+      <itemPath>engine/model/constraints/AssignTimeConstraint.cpp</itemPath>
+      <itemPath>engine/model/constraints/AvoidClashesConstraint.cpp</itemPath>
       <itemPath>engine/model/constraints/Constraint.cpp</itemPath>
+      <itemPath>engine/evaluator/Cost.cpp</itemPath>
       <itemPath>engine/model/events/Course.cpp</itemPath>
       <itemPath>engine/model/times/Day.cpp</itemPath>
+      <itemPath>engine/evaluator/Evaluator.cpp</itemPath>
       <itemPath>engine/model/events/Event.cpp</itemPath>
       <itemPath>engine/model/events/EventGroup.cpp</itemPath>
+      <itemPath>engine/model/constraints/EventGroupsBasedContraint.cpp</itemPath>
+      <itemPath>engine/model/constraints/PreferResourcesConstraint.cpp</itemPath>
       <itemPath>engine/model/resources/Resource.cpp</itemPath>
       <itemPath>engine/model/resources/ResourceGroup.cpp</itemPath>
+      <itemPath>engine/model/constraints/ResourceGroupsBasedContraint.cpp</itemPath>
       <itemPath>engine/model/resources/ResourceType.cpp</itemPath>
+      <itemPath>engine/model/resources/Role.cpp</itemPath>
       <itemPath>engine/model/Schedule.cpp</itemPath>
       <itemPath>engine/model/solutions/SolEvent.cpp</itemPath>
       <itemPath>engine/model/solutions/Solution.cpp</itemPath>
       <itemPath>engine/model/times/Time.cpp</itemPath>
       <itemPath>engine/model/times/TimeGroup.cpp</itemPath>
+      <itemPath>engine/io/Utils.cpp</itemPath>
       <itemPath>engine/model/times/Week.cpp</itemPath>
       <itemPath>engine/io/XHSTTExporter.cpp</itemPath>
       <itemPath>engine/io/XHSTTImporter.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>lib/tinyxml2/tinyxml2.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f1"
+                     displayName="XHSTTImporterTest"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/XHSTTImporterSudoku4x4Test.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="XHSTTImporterTest"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/XHSTTImporterArtificialAbramson15Test.cpp</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -72,6 +106,18 @@
           <commandLine>-std=c++11</commandLine>
         </ccTool>
       </compileType>
+      <item path="engine/evaluator/Cost.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/evaluator/Cost.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/evaluator/Evaluator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/evaluator/Evaluator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/io/Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/io/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="engine/io/XHSTTExporter.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="engine/io/XHSTTExporter.h" ex="false" tool="3" flavor2="0">
@@ -84,12 +130,72 @@
       </item>
       <item path="engine/model/Schedule.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="engine/model/constraints/AssignResourceConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AssignResourceConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AssignTimeConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AssignTimeConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AvoidClashesConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AvoidClashesConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="engine/model/constraints/Constraint.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
       <item path="engine/model/constraints/Constraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/EventGroupsBasedContraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/EventGroupsBasedContraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/PreferResourcesConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/PreferResourcesConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/ResourceGroupsBasedContraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/ResourceGroupsBasedContraint.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -133,6 +239,10 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="engine/model/resources/Role.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/resources/Role.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="engine/model/solutions/SolEvent.cpp"
             ex="false"
             tool="1"
@@ -163,9 +273,53 @@
       </item>
       <item path="engine/model/times/Week.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <item path="lib/tinyxml2/tinyxml2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/tinyxml2/tinyxml2.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/XHSTTImporterArtificialAbramson15Test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/XHSTTImporterSudoku4x4Test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -188,6 +342,18 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="engine/evaluator/Cost.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/evaluator/Cost.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/evaluator/Evaluator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/evaluator/Evaluator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="engine/io/Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/io/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="engine/io/XHSTTExporter.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="engine/io/XHSTTExporter.h" ex="false" tool="3" flavor2="0">
@@ -200,12 +366,72 @@
       </item>
       <item path="engine/model/Schedule.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="engine/model/constraints/AssignResourceConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AssignResourceConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AssignTimeConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AssignTimeConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AvoidClashesConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/AvoidClashesConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="engine/model/constraints/Constraint.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
       <item path="engine/model/constraints/Constraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/EventGroupsBasedContraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/EventGroupsBasedContraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/PreferResourcesConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/PreferResourcesConstraint.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/ResourceGroupsBasedContraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="engine/model/constraints/ResourceGroupsBasedContraint.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -249,6 +475,10 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="engine/model/resources/Role.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="engine/model/resources/Role.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="engine/model/solutions/SolEvent.cpp"
             ex="false"
             tool="1"
@@ -279,9 +509,53 @@
       </item>
       <item path="engine/model/times/Week.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <item path="lib/tinyxml2/tinyxml2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lib/tinyxml2/tinyxml2.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="nbproject/project.properties" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/XHSTTImporterArtificialAbramson15Test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/XHSTTImporterSudoku4x4Test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
     </conf>
   </confs>

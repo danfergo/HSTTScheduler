@@ -32,14 +32,29 @@
 #ifndef CONSTRAINT_H
 #define CONSTRAINT_H
 
+#include <string>
+#include "../solutions/Solution.h"
+
+using namespace std;
+
+class Schedule;
 class Constraint {
 public:
-    enum CostFunction { Linear };
-    Constraint();
-    Constraint(const Constraint& orig);
+
+    enum CostFunction {
+        Linear
+    };
+
+    Constraint(string name, bool required, float weight, CostFunction costFunction);
+    static CostFunction CostFunctionToEnum(const char * costFunctionStr);
+    virtual int evaluate(Solution * solution,Schedule * schedule) const = 0;
+    bool isRequired() const;
     virtual ~Constraint();
 private:
-
+    string mName;
+    bool mRequired;
+    float mWeight;
+    CostFunction mCostFunction;
 };
 
 #endif /* CONSTRAINT_H */

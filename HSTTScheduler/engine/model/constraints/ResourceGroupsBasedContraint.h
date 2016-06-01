@@ -23,20 +23,27 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   ResourceGroupsBasedContraint.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 21:06
  */
 
-#include "EventGroup.h"
+#ifndef RESOURCEGROUPSBASEDCONTRAINT_H
+#define RESOURCEGROUPSBASEDCONTRAINT_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include <vector>
+#include "Constraint.h"
+#include "../resources/ResourceGroup.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+class ResourceGroupsBasedContraint {
+public:
+    ResourceGroupsBasedContraint();
+    vector<ResourceGroup*> & appliesTo();
+protected:
+    vector<ResourceGroup*> mResourceGroups;
 
-EventGroup::~EventGroup() {
-}
+};
+
+#endif /* RESOURCEGROUPSBASEDCONTRAINT_H */
 

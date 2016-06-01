@@ -32,13 +32,18 @@
 #ifndef RESOURCETYPE_H
 #define RESOURCETYPE_H
 
+#include <map>
+#include <string>
+
+using namespace std;
+
 class ResourceType {
 public:
-    ResourceType();
+    ResourceType(string mName);
     ResourceType(const ResourceType& orig);
     virtual ~ResourceType();
 private:
-
+    string mName;
 };
 
 #endif /* RESOURCETYPE_H */

@@ -23,20 +23,32 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   PreferResourcesConstraint.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 20:37
  */
 
-#include "EventGroup.h"
+#ifndef PREFERRESOURCESCONSTRAINT_H
+#define PREFERRESOURCESCONSTRAINT_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include <vector>
+#include "Constraint.h"
+#include "ResourceGroupsBasedContraint.h"
+#include "../resources/Role.h"
+#include "../events/EventGroup.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+using namespace std;
 
-EventGroup::~EventGroup() {
-}
+class PreferResourcesConstraint : public Constraint, public ResourceGroupsBasedContraint {
+public:
+    PreferResourcesConstraint(string name, bool required, float weight, CostFunction costFunction, Role * role);
+    vector<EventGroup *> & getEventGroups();
+    virtual ~PreferResourcesConstraint();
+private:
+    Role * mRole;
+    vector<EventGroup *> mEventGroups;
+};
+
+#endif /* PREFERRESOURCESCONSTRAINT_H */
 

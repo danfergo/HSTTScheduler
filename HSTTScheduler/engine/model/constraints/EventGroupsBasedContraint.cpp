@@ -23,20 +23,18 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   EventGroupsBasedContraint.cpp
  * Author: danfergo
  * 
- * Created on 28 de Maio de 2016, 22:37
+ * Created on 30 de Maio de 2016, 20:57
  */
 
-#include "EventGroup.h"
+#include "EventGroupsBasedContraint.h"
 
-EventGroup::EventGroup(string name):mName(name) {
+EventGroupsBasedContraint::EventGroupsBasedContraint() {
 }
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
-
-EventGroup::~EventGroup() {
+vector<EventGroup*> & EventGroupsBasedContraint::appliesTo() {
+    return mEventGroups;
 }
 

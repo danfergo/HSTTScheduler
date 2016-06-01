@@ -30,11 +30,39 @@
  */
 
 #include "Schedule.h"
+#include "solutions/SolEvent.h"
 
 Schedule::Schedule() {
+
 }
 
-Schedule::Schedule(const Schedule& orig) {
+vector<Time*>& Schedule::getTimes() {
+    return mTimes;
+}
+
+vector<Resource*>& Schedule::getResources() {
+    return mResources;
+}
+
+vector<Event*>& Schedule::getEvents() {
+    return mEvents;
+}
+
+vector<Solution*>& Schedule::getSolutions() {
+    return mSolutions;
+}
+
+vector<Constraint*>& Schedule::getConstraints() {
+    return mConstraints;
+}
+
+SolEvent * Schedule::eventSolution(Solution * solution, Event * event) {
+    for (Solution::iterator solIt = solution->begin(); solIt != solution->end(); ++solIt) {
+        if((*solIt)->getEvent() == event){
+            return *solIt;
+        }
+    }
+    return NULL;
 }
 
 Schedule::~Schedule() {

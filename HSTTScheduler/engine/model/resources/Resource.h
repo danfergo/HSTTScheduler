@@ -32,13 +32,24 @@
 #ifndef RESOURCE_H
 #define RESOURCE_H
 
+#include <string>
+#include <vector>
+#include "ResourceType.h"
+
+using namespace std;
+class ResourceGroup;
+
 class Resource {
 public:
-    Resource();
+    Resource(string name, ResourceType * resourceType);
     Resource(const Resource& orig);
+    vector<ResourceGroup*>& getResourceGroups();
+    ResourceType * getResourceType() const;
     virtual ~Resource();
 private:
-
+    string mName;
+    vector<ResourceGroup*> mResourceGroups;
+    ResourceType * mResourceType;
 };
 
 #endif /* RESOURCE_H */

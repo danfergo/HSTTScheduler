@@ -31,12 +31,6 @@
 
 #include "Week.h"
 
-Week::Week() {
-}
+Week::Week(string name): TimeGroup(name){
 
-Week::Week(const Week& orig) {
-}
-
-Week::~Week() {
-}
-
+};

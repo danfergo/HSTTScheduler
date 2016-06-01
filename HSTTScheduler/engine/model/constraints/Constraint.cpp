@@ -31,10 +31,15 @@
 
 #include "Constraint.h"
 
-Constraint::Constraint() {
+Constraint::Constraint(string name, bool required, float weight, CostFunction costFunction) : mName(name), mRequired(required), mWeight(weight), mCostFunction(costFunction) {
 }
 
-Constraint::Constraint(const Constraint& orig) {
+enum Constraint::CostFunction Constraint::CostFunctionToEnum(const char * costFunctionStr) {
+    return CostFunction::Linear;
+}
+
+bool Constraint::isRequired() const {
+    return mRequired;
 }
 
 Constraint::~Constraint() {

@@ -31,7 +31,7 @@
 
 #include "Time.h"
 
-Time::Time() {
+Time::Time(string name, TimeGroup * timeGroup): mName(name), mTimeGroup(timeGroup){
 }
 
 Time::Time(const Time& orig) {

@@ -32,13 +32,26 @@
 #ifndef SOLEVENT_H
 #define SOLEVENT_H
 
+#include <map>
+#include "../events/Event.h"
+#include "../times/Time.h"
+#include "../resources/Role.h"
+
+using namespace std;
+
 class SolEvent {
 public:
-    SolEvent();
+    SolEvent(Event * event, Time * time);
     SolEvent(const SolEvent& orig);
+    map<string, Role*> & getRoles();
+    Event * getEvent();
+    Time * getTime();
+    bool requiresResource(Resource * resource);
     virtual ~SolEvent();
 private:
-
+    map<string, Role*> mRoles;
+    Event * mEvent;
+    Time * mTime;
 };
 
 #endif /* SOLEVENT_H */

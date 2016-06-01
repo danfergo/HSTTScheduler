@@ -23,20 +23,20 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Cost.cpp
  * Author: danfergo
  * 
- * Created on 28 de Maio de 2016, 22:37
+ * Created on 30 de Maio de 2016, 22:33
  */
 
-#include "EventGroup.h"
+#include "Cost.h"
 
-EventGroup::EventGroup(string name):mName(name) {
+Cost::Cost() : Infeasibility(0), Objective(0) {
 }
 
-EventGroup::EventGroup(const EventGroup& orig) {
+Cost Cost::operator+(const Cost& other) {
+    return Cost (this->Infeasibility + other.Infeasibility, this->Objective + other.Objective);
 }
 
-EventGroup::~EventGroup() {
+Cost::Cost(int i, int o) : Infeasibility(i), Objective(o) {
 }
-

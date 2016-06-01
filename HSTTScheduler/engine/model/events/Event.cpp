@@ -31,10 +31,20 @@
 
 #include "Event.h"
 
-Event::Event() {
+Event::Event(string name, Course * course, int duration) : mName(name), mCourse(course), mDuration(duration) {
 }
 
-Event::Event(const Event& orig) {
+
+vector<EventGroup*>& Event::getEventGroups() {
+    return mEventGroups;
+}
+
+map<string,Role*>& Event::getAssignedRoles() {
+    return mAssignedRoles;
+}
+
+map<string,Role*>& Event::getNonAssignedRoles() {
+    return mNonAssignedRoles;
 }
 
 Event::~Event() {

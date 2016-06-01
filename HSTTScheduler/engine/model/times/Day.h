@@ -34,12 +34,9 @@
 
 #include "TimeGroup.h"
 
-class Day : public TimeGroup{
+class Day : public TimeGroup {
 public:
-    Day();
-    Day(const Day& orig);
-    virtual ~Day();
-private:
+    Day(string name);
 
 };
 

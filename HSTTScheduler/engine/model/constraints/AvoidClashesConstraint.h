@@ -23,20 +23,26 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   AvoidClashesConstraint.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 20:17
  */
 
-#include "EventGroup.h"
+#ifndef AVOIDCLASHESCONSTRAINT_H
+#define AVOIDCLASHESCONSTRAINT_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include "Constraint.h"
+#include "ResourceGroupsBasedContraint.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+class AvoidClashesConstraint : public Constraint, public ResourceGroupsBasedContraint {
+public:
+    AvoidClashesConstraint(string name, bool required, float weight, CostFunction costFunction);
+    virtual int evaluate(Solution * solution,Schedule * schedule) const;
+    virtual ~AvoidClashesConstraint();
+private:
 
-EventGroup::~EventGroup() {
-}
+};
+
+#endif /* AVOIDCLASHESCONSTRAINT_H */
 

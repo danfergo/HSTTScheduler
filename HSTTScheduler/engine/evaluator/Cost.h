@@ -23,20 +23,22 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Cost.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 22:33
  */
 
-#include "EventGroup.h"
+#ifndef COST_H
+#define COST_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+class Cost {
+public:
+    Cost();
+    Cost(int infeasibility, int objective);
+    Cost operator+(const Cost& other);
+    int Infeasibility, Objective;
+};
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
-
-EventGroup::~EventGroup() {
-}
+#endif /* COST_H */
 

@@ -31,11 +31,40 @@
 
 #include "SolEvent.h"
 
-SolEvent::SolEvent() {
+SolEvent::SolEvent(Event * event, Time * time) : mEvent(event), mTime(time) {
 }
 
 SolEvent::SolEvent(const SolEvent& orig) {
 }
+
+map<string, Role*> & SolEvent::getRoles() {
+    return mRoles;
+}
+
+Event * SolEvent::getEvent() {
+    return mEvent;
+}
+
+Time * SolEvent::getTime() {
+    return mTime;
+}
+
+bool SolEvent::requiresResource(Resource * resource){
+    for (map<string,Role*>::const_iterator roleIt = mRoles.begin(); roleIt != mRoles.end(); ++roleIt) {
+        if((roleIt->second)->getResource() == resource){
+            return true;
+        }
+    }
+    
+    for (map<string,Role*>::const_iterator roleIt = mEvent->getAssignedRoles().begin(); roleIt != mEvent->getAssignedRoles().end(); ++roleIt) {
+        if((roleIt->second)->getResource() == resource){
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 
 SolEvent::~SolEvent() {
 }

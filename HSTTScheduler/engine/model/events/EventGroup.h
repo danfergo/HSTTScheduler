@@ -32,13 +32,18 @@
 #ifndef EVENTGROUP_H
 #define EVENTGROUP_H
 
-class EventGroup {
+#include <map>
+#include <vector>
+using namespace std;
+
+class Event;
+class EventGroup : public vector<Event*> {
 public:
-    EventGroup();
+    EventGroup(string name);
     EventGroup(const EventGroup& orig);
     virtual ~EventGroup();
 private:
-
+    string mName;
 };
 
 #endif /* EVENTGROUP_H */

@@ -31,11 +31,20 @@
 
 #include "Resource.h"
 
-Resource::Resource() {
+Resource::Resource(string name, ResourceType * resourceType): mName(name), mResourceType(resourceType) {
 }
 
 Resource::Resource(const Resource& orig) {
 }
+
+vector<ResourceGroup*>& Resource::getResourceGroups(){
+    return mResourceGroups;
+}
+
+ResourceType * Resource::getResourceType() const{
+    return mResourceType;
+}
+
 
 Resource::~Resource() {
 }

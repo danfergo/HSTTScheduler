@@ -23,20 +23,32 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Role.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 29 de Maio de 2016, 23:17
  */
 
-#include "EventGroup.h"
+#ifndef ROLE_H
+#define ROLE_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include <string>
+#include "ResourceType.h"
+#include "Resource.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+class Role {
+public:
+    Role(string name, Resource * resource);
+    Role(string name, ResourceType * resourceType);
+    Role(const Role& orig);
+    bool hasResourceAssigned () const;
+    Resource * getResource();
+    virtual ~Role();
+private:
+    ResourceType * mResourceType;
+    Resource * mResource;
+    string mName;
+};
 
-EventGroup::~EventGroup() {
-}
+#endif /* ROLE_H */
 

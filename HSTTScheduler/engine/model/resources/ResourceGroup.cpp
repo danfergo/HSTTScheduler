@@ -31,11 +31,10 @@
 
 #include "ResourceGroup.h"
 
-ResourceGroup::ResourceGroup() {
+ResourceGroup::ResourceGroup(string name, ResourceType * const resourceType): mName(name), mResourceType(resourceType){
 }
 
-ResourceGroup::ResourceGroup(const ResourceGroup& orig) {
-}
+
 
 ResourceGroup::~ResourceGroup() {
 }

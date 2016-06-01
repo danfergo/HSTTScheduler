@@ -32,7 +32,12 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 
-class Solution {
+#include <vector>
+ 
+using namespace std;
+class SolEvent;
+
+class Solution : public vector <SolEvent*> {
 public:
     Solution();
     Solution(const Solution& orig);

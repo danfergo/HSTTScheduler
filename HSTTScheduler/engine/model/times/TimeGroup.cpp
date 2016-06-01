@@ -31,10 +31,7 @@
 
 #include "TimeGroup.h"
 
-TimeGroup::TimeGroup() {
-}
-
-TimeGroup::TimeGroup(const TimeGroup& orig) {
+TimeGroup::TimeGroup(string name): mName(name) {
 }
 
 TimeGroup::~TimeGroup() {

@@ -36,8 +36,7 @@
 
 class Course : public EventGroup {
 public:
-    Course();
-    Course(const Course& orig);
+    Course(string name);
     virtual ~Course();
 private:
 

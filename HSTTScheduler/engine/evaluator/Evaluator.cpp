@@ -23,20 +23,39 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Evaluator.cpp
  * Author: danfergo
  * 
- * Created on 28 de Maio de 2016, 22:37
+ * Created on 30 de Maio de 2016, 22:17
  */
 
-#include "EventGroup.h"
+#include "Evaluator.h"
+#include <iostream>
 
-EventGroup::EventGroup(string name):mName(name) {
+Evaluator::Evaluator(Schedule & schedule) : mSchedule(schedule) {
 }
 
-EventGroup::EventGroup(const EventGroup& orig) {
+Cost Evaluator::evaluate() {
+    return evaluateSolution(mSchedule.getSolutions().at(0));
 }
 
-EventGroup::~EventGroup() {
+Cost Evaluator::evaluateSolution(Solution * solution) {
+    Cost cost;
+    vector<Constraint*> & constraints = mSchedule.getConstraints();
+    for (vector<Constraint*> ::iterator it = constraints.begin(); it != constraints.end(); ++it) {
+
+        int c = (*it)->evaluate(solution, &mSchedule);
+        if ((*it)->isRequired()) {
+            cost.Infeasibility += c;
+        } else {
+            cost.Objective += c;
+
+        }
+    }
+
+    return cost;
+}
+
+Evaluator::~Evaluator() {
 }
 

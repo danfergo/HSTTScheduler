@@ -23,20 +23,29 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   AssignResourceConstraint.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 20:51
  */
 
-#include "EventGroup.h"
+#ifndef ASSIGNRESOURCECONSTRAINT_H
+#define ASSIGNRESOURCECONSTRAINT_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include <vector>
+#include "Constraint.h"
+#include "EventGroupsBasedContraint.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+using namespace std;
 
-EventGroup::~EventGroup() {
-}
+class AssignResourceConstraint : public Constraint, public EventGroupsBasedContraint {
+public:
+    AssignResourceConstraint(string name, bool required, float weight, CostFunction costFunction, string roleName);
+    virtual int evaluate(Solution * solution, Schedule * schedule) const;
+    virtual ~AssignResourceConstraint();
+private:
+    string mRoleName;
+};
+
+#endif /* ASSIGNRESOURCECONSTRAINT_H */
 

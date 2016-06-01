@@ -23,20 +23,28 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Util.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 29 de Maio de 2016, 21:27
  */
 
-#include "EventGroup.h"
+#ifndef UTIL_H
+#define UTIL_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include "../../lib/tinyxml2/tinyxml2.h"
+#include <vector>
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
+using namespace std;
+using namespace tinyxml2;
 
-EventGroup::~EventGroup() {
-}
+class Utils {
+public:
+    static XMLElement * getFirstChildElement(XMLElement * element, vector<const char *> names);
+    static XMLElement * getNextSibilingElement(XMLElement * element, vector<const char *> names);
+    static XMLElement * getFirstChildElementWith(XMLElement * element, const char * name, const char * attribute, const char * value);
+    static XMLElement * getNextSibilingElementWith(XMLElement * element, const char * name, const char * attribute, const char * value);
+};
+
+#endif /* UTIL_H */
 

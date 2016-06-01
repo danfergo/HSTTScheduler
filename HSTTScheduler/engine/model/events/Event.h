@@ -32,14 +32,31 @@
 #ifndef EVENT_H
 #define EVENT_H
 
+#include <string>
+#include <vector>
+#include <map>
+#include "Course.h"
+
+
+using namespace std;
+
+class EventGroup;
+class Role;
 
 class Event {
 public:
-    Event();
-    Event(const Event& orig);
+    Event(string name, Course * course, int duration);
+    vector<EventGroup*>& getEventGroups();
+    map<string, Role*>& getAssignedRoles();
+    map<string, Role*>& getNonAssignedRoles();
     virtual ~Event();
 private:
-
+    string mName;
+    int mDuration;
+    vector<EventGroup*> mEventGroups;
+    map<string, Role*> mAssignedRoles;
+    map<string, Role*> mNonAssignedRoles;
+    Course * mCourse;
 };
 
 #endif /* EVENT_H */

@@ -36,10 +36,7 @@
 
 class Week : public TimeGroup {
 public:
-    Week();
-    Week(const Week& orig);
-    virtual ~Week();
-private:
+    Week(string name);
 
 };
 

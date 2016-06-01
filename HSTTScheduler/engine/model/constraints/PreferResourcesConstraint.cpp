@@ -23,20 +23,21 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   PreferResourcesConstraint.cpp
  * Author: danfergo
  * 
- * Created on 28 de Maio de 2016, 22:37
+ * Created on 30 de Maio de 2016, 20:37
  */
 
-#include "EventGroup.h"
+#include "PreferResourcesConstraint.h"
 
-EventGroup::EventGroup(string name):mName(name) {
+PreferResourcesConstraint::PreferResourcesConstraint(string name, bool required, float weight, CostFunction costFunction, Role * role) : Constraint(name, required, weight, costFunction), mRole(role) {
 }
 
-EventGroup::EventGroup(const EventGroup& orig) {
+vector<EventGroup *> & PreferResourcesConstraint::getEventGroups() {
+    return mEventGroups;
 }
 
-EventGroup::~EventGroup() {
+PreferResourcesConstraint::~PreferResourcesConstraint() {
 }
 

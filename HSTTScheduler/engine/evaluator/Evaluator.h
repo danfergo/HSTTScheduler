@@ -23,20 +23,29 @@
  */
 
 /* 
- * File:   EventGroup.cpp
+ * File:   Evaluator.h
  * Author: danfergo
- * 
- * Created on 28 de Maio de 2016, 22:37
+ *
+ * Created on 30 de Maio de 2016, 22:17
  */
 
-#include "EventGroup.h"
+#ifndef EVALUATOR_H
+#define EVALUATOR_H
 
-EventGroup::EventGroup(string name):mName(name) {
-}
+#include "../model/Schedule.h"
+#include "../model/solutions/Solution.h"
+#include "Cost.h"
 
-EventGroup::EventGroup(const EventGroup& orig) {
-}
 
-EventGroup::~EventGroup() {
-}
+class Evaluator {
+public:
+    Evaluator(Schedule & schedule);
+    Cost evaluate();
+    Cost evaluateSolution(Solution * solution);
+    virtual ~Evaluator();
+private:
+    Schedule & mSchedule;
+};
+
+#endif /* EVALUATOR_H */
 
